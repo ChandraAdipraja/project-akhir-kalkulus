@@ -12,11 +12,8 @@ import { PointSearch } from "~/features/points/pages";
 import { ProfilePage } from "~/features/profile/pages";
 import { TypesGrafikPage } from "~/features/type/pages";
 import PageContainer from "~/layout/PageContainer";
-import { api } from "~/utils/api";
 
 export default function UserPage() {
-  const hello = api.post.hello.useQuery({ text: "from tRPC" });
-
   return (
     <>
       <Head>

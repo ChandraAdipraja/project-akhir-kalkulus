@@ -34,6 +34,7 @@ const formSchema = z.object({
 export const MessagePage = () => {
   interface ResponData {
     message: string;
+    success: boolean;
   }
   // Move the useForm inside the component
   const form = useForm<z.infer<typeof formSchema>>({
@@ -79,10 +80,6 @@ export const MessagePage = () => {
       form.name = "";
       form.messages = "";
     }
-
-    const content: ResponData = await response.json();
-
-    console.log(content);
 
     setname("");
     setemail("");

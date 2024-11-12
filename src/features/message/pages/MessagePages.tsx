@@ -81,7 +81,7 @@ export const MessagePage = () => {
       form.messages = "";
     }
 
-    const res: ResponData = await response.json();
+    const res: ResponData = (await response.json()) as ResponData;
     console.log(res.message);
     console.log(res.success);
 

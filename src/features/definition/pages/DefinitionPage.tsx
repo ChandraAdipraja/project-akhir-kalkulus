@@ -26,18 +26,19 @@ export const DefinitionPage = () => {
           GRAFIK FUNGSI LINEAR
         </h1>
         <p>
-          <span className="bg-sky-400 font-bold">Grafik fungsi </span>
-          dalam kalkulus adalah kurva yang merepresentasikan fungsi pada bidang
-          koordinat. Grafik fungsi menggambarkan hubungan antara dua variabel
-          dalam suatu fungsi matematika.
+          <span className="bg-sky-400 font-bold">Grafik Fungsi Linear </span>
+          Pada dasarnya, definisi dari fungsi linear adalah relasi yang
+          memasangkan setiap anggota yang ada di himpunan A dengan anggota lain
+          di himpunan B. Semua anggota yang ada di himpunan A harus berpasangan
+          dengan anggota yang ada di himpunan B. Fungsi linear ini disebut juga
+          dengan Persamaan Garis Lurus (PGL). Seperti yang telah diungkapkan
+          sebelumnya, fungsi dalam dunia matematika akan berkaitan erat dengan
+          unsur pembentuknya, yakni berupa variabel, koefisien, dan konstanta.
         </p>
         <p>
-          Grafik fungsi menunjukkan bagaimana perubahan pada variabel independen
-          memengaruhi variabel dependen. Untuk menentukan apakah suatu grafik
-          mewakili fungsi, Anda dapat memeriksa apakah garis vertikal hanya
-          memotong grafik di satu titik saja. Jika garis vertikal memotong
-          grafik di dua titik atau lebih, maka grafik tersebut tidak mewakili
-          fungsi.
+          Jadi, fungsi linear adalah suatu fungsi yang membentuk grafik secara
+          garis lurus. Fungsi linear ini juga menjadi fungsi yang telah
+          mendapatkan pangkat tertinggi dengan variabelnya sama dengan satu.
         </p>
       </div>
     </div>

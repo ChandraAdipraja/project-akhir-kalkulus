@@ -12,9 +12,9 @@ const DetailQuizPage = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 5;
 
-  const [selectedAnswers, setSelectedAnswers] = useState<{
-    [key: string]: string | null;
-  }>({});
+  const [selectedAnswers, setSelectedAnswers] = useState<
+    Record<string, string | null>
+  >({});
 
   if (!id || Array.isArray(id)) {
     return <div>Loading...</div>;
@@ -32,12 +32,12 @@ const DetailQuizPage = () => {
       return selectedAnswer === question.answer ? score + 1 : score;
     }, 0);
   };
-  const handleNext = () => {
+  const handleNext = async () => {
     const nextId = Number(id) + 1;
     if (nextId <= quiz.length) {
-      router.push(`/quiz/${nextId}`);
+      await router.push(`/quiz/${nextId}`);
     } else {
-      router.push({
+      await router.push({
         pathname: "/quiz/score",
         query: { score: calculateScore() }, // menambahkan skor pada query
       });
@@ -46,13 +46,13 @@ const DetailQuizPage = () => {
       setCurrentStep(currentStep + 1);
     }
   };
-  const handleBack = () => {
+  const handleBack = async () => {
     const prevId = Number(id) - 1;
     if (prevId >= 1) {
-      router.push(`/quiz/${prevId}`);
+      await router.push(`/quiz/${prevId}`);
     } else {
       // Mungkin tampilkan pesan atau kembalikan ke halaman pertama
-      router.push(`/quiz/1`);
+      await router.push(`/quiz/1`);
     }
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
@@ -76,7 +76,7 @@ const DetailQuizPage = () => {
           questionData={questionData}
           onNext={handleNext}
           onBack={handleBack}
-          selectedOption={selectedAnswers[id] || null}
+          selectedOption={selectedAnswers[id] ?? null}
           onSelectOption={handleSelectAnswer}
           currentStep={currentStep}
           totalSteps={totalSteps}

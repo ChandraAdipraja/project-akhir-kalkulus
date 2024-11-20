@@ -12,10 +12,10 @@ import { TitleSection } from "~/components/ui/TitleSection";
 
 export const DefinitionPage = () => {
   return (
-    <div className="flex flex-col justify-center px-4 text-center lg:flex-row lg:gap-x-28 lg:space-x-4 lg:px-40 lg:text-center">
+    <div className="my-20 flex flex-col justify-center px-4 text-center lg:flex-row lg:gap-x-28 lg:space-x-4 lg:px-40 lg:text-center">
       <TitleSection>Grafik Fungsi Linear</TitleSection>
       <Image
-        src="/images/mathDef.png"
+        src="/images/matemathic.png"
         alt="definiton.png"
         width={400}
         height={400}

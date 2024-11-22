@@ -43,7 +43,7 @@ const PageContainer: React.FC<{ children: React.ReactNode }> = ({
 
       {/* Footer */}
       <footer className="bg-white-800 border-t-4 border-black p-4 text-center text-secondaryBlack dark:border-darkBorder dark:bg-darkBg dark:text-white">
-        © 2024 My Website - Created by Blablabla
+        © 2024 LinearKU - Created With Spirit 🎉
       </footer>
     </div>
   );

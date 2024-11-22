@@ -28,12 +28,12 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
   const currentPath = router.asPath;
   const progress = (currentStep / totalSteps) * 100;
   return (
-    <div className="borde flex min-w-[20rem] flex-col items-center justify-center gap-y-8 lg:w-[60rem]">
+    <div className="flex min-w-[20rem] flex-col items-center justify-center gap-y-8 lg:w-[60rem]">
       <Progress value={progress} />
       <div className="flex items-center justify-center">
-        <h2 className="mt-5 text-center text-3xl">{questionData.question}</h2>
+        <h2 className="text-center text-xl">{questionData.question}</h2>
       </div>
-      <div className="flex w-[20rem] flex-col items-center justify-center border lg:w-1/2">
+      <div className="flex w-full flex-col items-center justify-center border lg:w-1/2">
         <ul className="flex w-full flex-col gap-4">
           {["a", "b", "c", "d"].map((option) => (
             <Button
@@ -41,7 +41,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
               variant={"neutral"}
               className={
                 selectedOption === option
-                  ? "lg:text-md bg-red-500 text-xs"
+                  ? "lg:text-md bg-sky-400 text-xs"
                   : "lg:text-md text-xs"
               }
               onClick={() => onSelectOption(option)}

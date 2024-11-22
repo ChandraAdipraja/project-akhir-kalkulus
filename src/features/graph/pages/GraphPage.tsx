@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "~/components/ui/Button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogFooter,
   DialogHeader,
@@ -168,9 +169,11 @@ export const GraphPage = () => {
             </div>
           </div>
           <DialogFooter>
-            <Button onClick={handleSubmit} variant={"neutral"} type="submit">
-              Kirim
-            </Button>
+            <DialogClose asChild>
+              <Button onClick={handleSubmit} variant={"neutral"} type="submit">
+                Kirim
+              </Button>
+            </DialogClose>
           </DialogFooter>
         </DialogContent>
       </Dialog>

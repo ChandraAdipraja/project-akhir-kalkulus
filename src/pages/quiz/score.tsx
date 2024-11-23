@@ -37,21 +37,29 @@ const QuizResult = () => {
                   score === "2" ||
                   score === "3" ||
                   score === "4" ||
-                  score === "5"
+                  score === "5" ||
+                  score === "6" ||
+                  score === "7" ||
+                  score === "8" ||
+                  score === "9" ||
+                  score === "10"
                     ? "mt-10 text-8xl text-yellow-300 lg:text-9xl"
                     : "mt-10 text-8xl text-yellow-50 lg:text-9xl"
                 }
               />
               <BiSolidStar
                 className={
-                  score === "5"
+                  score === "10"
                     ? "text-8xl text-yellow-300 lg:text-9xl"
                     : "text-8xl text-yellow-50 lg:text-9xl"
                 }
               />
               <BiSolidStar
                 className={
-                  score === "3" || score === "4" || score === "5"
+                  score === "6" ||
+                  score === "7" ||
+                  score === "8" ||
+                  score === "9"
                     ? "mt-10 text-8xl text-yellow-300 lg:text-9xl"
                     : "mt-10 text-8xl text-yellow-50 lg:text-9xl"
                 }

@@ -30,7 +30,10 @@ export const GuidesPage = () => {
           </div>
           <div className="flex w-full justify-center">
             {/* download pdf */}
-            <Link href="/Assets/manualBook.pdf" download={true}>
+            <Link
+              href="/Assets/Manual-Book-Website-Linearku.pdf"
+              download={true}
+            >
               <Button variant={"neutral"}>
                 Download
                 <FaDownload className="ml-2 text-xl" />
@@ -54,7 +57,7 @@ export const GuidesPage = () => {
           </div>
           <div className="flex w-full justify-center">
             {/* download pdf */}
-            <Link href="/Assets/manualBook.pdf" download={true}>
+            <Link href="/Assets/Create-Linearku.pdf" download={true}>
               <Button variant={"neutral"}>
                 Download
                 <FaDownload className="ml-2 text-xl" />

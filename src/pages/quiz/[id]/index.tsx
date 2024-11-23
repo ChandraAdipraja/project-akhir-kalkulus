@@ -13,7 +13,7 @@ const DetailQuizPage = () => {
   const { id } = router.query;
 
   const [currentStep, setCurrentStep] = useState(1);
-  const totalSteps = 5;
+  const totalSteps = 10;
 
   const [selectedAnswers, setSelectedAnswers] = useState<
     Record<string, string | null>

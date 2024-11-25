@@ -3,6 +3,8 @@ import { Montserrat } from "@next/font/google";
 import { type AppType } from "next/app";
 
 import "~/styles/globals.css";
+import { useEffect, useState } from "react";
+import SplashScreen from "~/components/ui/SplashScreen";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -10,9 +12,17 @@ const montserrat = Montserrat({
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Hilangkan splash screen setelah 3 detik
+    }, 3000);
+    return () => clearTimeout(timer); // Bersihkan timer
+  }, []);
   return (
     <div className={montserrat.className}>
-      <Component {...pageProps} />
+      {isLoading ? <SplashScreen /> : <Component {...pageProps} />}
     </div>
   );
 };

@@ -27,7 +27,11 @@ export const PointSearch = () => {
                 value="item-1"
               >
                 <AccordionTrigger>{pointSearch.question}</AccordionTrigger>
-                <AccordionContent>{pointSearch.answer}</AccordionContent>
+                <AccordionContent>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: pointSearch.answer }}
+                  />
+                </AccordionContent>
               </AccordionItem>
             </Accordion>
           </div>

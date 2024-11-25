@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { Button } from "~/components/ui/Button";
@@ -21,7 +22,12 @@ const PageContainer: React.FC<{ children: React.ReactNode }> = ({
   return (
     <div className="relative flex h-full min-h-screen w-full flex-col">
       {/* Navbar */}
-      <header className="border-b-4 border-black bg-white p-4 text-white dark:bg-darkBg">
+      <motion.header
+        className="border-b-4 border-black bg-white p-4 text-white dark:bg-darkBg"
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <nav className="container mx-auto flex items-center justify-between">
           {/* Website Title */}
           <h1 className="text-lg font-bold text-secondaryBlack dark:text-white">
@@ -33,7 +39,7 @@ const PageContainer: React.FC<{ children: React.ReactNode }> = ({
             <Button variant={"neutral"}>Tantang Quiz</Button>
           </Link>
         </nav>
-      </header>
+      </motion.header>
 
       {/* Main Content */}
       <main className="container relative mx-auto flex-grow dark:bg-darkBg dark:text-white">

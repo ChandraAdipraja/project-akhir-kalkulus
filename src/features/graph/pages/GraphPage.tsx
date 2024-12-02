@@ -187,7 +187,16 @@ export const GraphPage = () => {
           </div>
           <DialogFooter>
             <DialogClose asChild>
-              <Button onClick={handleSubmit} variant={"neutral"} type="submit">
+              <Button
+                onClick={(e) => {
+                  handleSubmit(e);
+                  (
+                    document.querySelector("[data-state='open']") as HTMLElement
+                  )?.click();
+                }}
+                variant={"neutral"}
+                type="submit"
+              >
                 Kirim
               </Button>
             </DialogClose>

@@ -43,7 +43,7 @@ export const profile: PropsProfile[] = [
   {
     id: 3,
     name: "Muhammad Kibar Ramadhan",
-    status: "Designer",
+    status: "UI/UX Designer",
     bio: "Pemuda asli Tasik yang sedang menempuh pendidikan di perguruan tinggi negeri, mempunyai aura posisi vibes yang dapat menghidupkan suasana orang lain",
     email: "kibarramadhan89@gmail.com",
     image: "images/kibar.png",
@@ -57,7 +57,7 @@ export const profile: PropsProfile[] = [
   {
     id: 4,
     name: "Ridwan Fauzi Almalik",
-    status: "Desain Web",
+    status: "UI/UX Designer",
     bio: "Pengen jadi streamer/Vtuber handal",
     email: "foxy.almalik@gmail.com",
     image: "images/ridwan.png",

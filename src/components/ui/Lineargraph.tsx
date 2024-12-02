@@ -7,9 +7,8 @@ import {
   Title,
   Tooltip,
   Legend,
-  Element,
 } from "chart.js";
-import { ChartOptions, Chart, LegendItem } from "chart.js";
+import { ChartOptions } from "chart.js";
 
 ChartJS.register(
   LinearScale,

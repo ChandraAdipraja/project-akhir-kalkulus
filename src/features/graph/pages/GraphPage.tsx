@@ -18,6 +18,7 @@ export const GraphPage = () => {
   const [x, setX] = useState("");
   const [y, setY] = useState("");
   const [constant, setConstant] = useState("");
+
   const [graphData, setGraphData] = useState<{
     xValues: number[];
     yValues: number[];
@@ -25,26 +26,36 @@ export const GraphPage = () => {
     equation: string;
   } | null>(null);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     const xVal = parseFloat(x);
     const yVal = parseFloat(y);
     const constVal = parseFloat(constant);
 
     const equation = `${xVal}x + ${yVal}y = ${constVal}`;
 
-    // Calculate the x-intercept (where y = 0)
-    const xIntercept = (constVal / xVal).toFixed(2);
-    const xNumber = parseFloat(xIntercept);
+    let xValues: number[] = [];
+    let yValues: number[] = [];
 
-    // Calculate the y-intercept (where x = 0)
-    const yIntercept = (constVal / yVal).toFixed(2);
-    const yNumber = parseFloat(yIntercept);
+    if (xVal === 0 && yVal !== 0) {
+      const yIntercept = (constVal / yVal).toFixed(2);
+      const yNumber = parseFloat(yIntercept);
+      xValues = [0, 0];
+      yValues = [yNumber];
+    } else if (yVal === 0 && xVal !== 0) {
+      const xIntercept = (constVal / xVal).toFixed(2);
+      const xNumber = parseFloat(xIntercept);
+      xValues = [xNumber];
+      yValues = [0, 0];
+    } else {
+      const xIntercept = (constVal / xVal).toFixed(2);
+      const xNumber = parseFloat(xIntercept);
+      const yIntercept = (constVal / yVal).toFixed(2);
+      const yNumber = parseFloat(yIntercept);
+      xValues = [xNumber, 0];
+      yValues = [0, yNumber];
+    }
 
-    // Prepare the data for the graph (x and y intercept points)
-    const xValues = [xNumber, 0]; // x-intercept at (x, 0)
-    const yValues = [0, yNumber]; // y-intercept at (0, y)
-
-    // Set the calculated intercept points as the graph data
     setGraphData({ xValues, yValues, constVal, equation });
   };
 
@@ -64,6 +75,7 @@ export const GraphPage = () => {
               placeholder="Masukkan Koefisien X"
               value={x}
               onChange={(e) => setX(e.target.value)}
+              required
             />
           </div>
           <div>
@@ -73,6 +85,7 @@ export const GraphPage = () => {
               placeholder="Masukkan Koefisien Y"
               value={y}
               onChange={(e) => setY(e.target.value)}
+              required
             />
           </div>
           <div>
@@ -85,6 +98,7 @@ export const GraphPage = () => {
               className="col-span-3"
               value={constant}
               onChange={(e) => setConstant(e.target.value)}
+              required
             />
           </div>
           <Button onClick={handleSubmit} variant={"neutral"} type="submit">
@@ -141,6 +155,7 @@ export const GraphPage = () => {
                 className="col-span-3"
                 value={x}
                 onChange={(e) => setX(e.target.value)}
+                required
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -153,6 +168,7 @@ export const GraphPage = () => {
                 className="col-span-3"
                 value={y}
                 onChange={(e) => setY(e.target.value)}
+                required
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -165,6 +181,7 @@ export const GraphPage = () => {
                 className="col-span-3"
                 value={constant}
                 onChange={(e) => setConstant(e.target.value)}
+                required
               />
             </div>
           </div>

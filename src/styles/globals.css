@@ -2,22 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    font-family: 'Montserrat', sans-serif;
+* {
+  font-family: "Montserrat", sans-serif;
 }
 @keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
+  0% {
+    transform: translateX(100%);
+  }
 
-    100% {
-        transform: translateX(-100%);
-    }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .marquee {
-    display: inline-block;
-    animation: marquee 50s linear infinite;
+  display: inline-block;
+  animation: marquee 50s linear infinite;
+}
+@layer utilities {
+  /* Menonaktifkan spinner pada input number */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }

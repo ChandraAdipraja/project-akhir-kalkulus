@@ -71,6 +71,7 @@ export const GraphPage = () => {
             <Label htmlFor="x">Koefisien X</Label>
             <Input
               id="x"
+              type="number"
               placeholder="Masukkan Koefisien X"
               value={x}
               onChange={(e) => setX(e.target.value)}
@@ -81,6 +82,7 @@ export const GraphPage = () => {
             <Label htmlFor="y">Koefisien Y</Label>
             <Input
               id="Y"
+              type="number"
               placeholder="Masukkan Koefisien Y"
               value={y}
               onChange={(e) => setY(e.target.value)}
@@ -93,6 +95,7 @@ export const GraphPage = () => {
             </Label>
             <Input
               id="konstanta"
+              type="number"
               placeholder="Masukkan Konstanta"
               className="col-span-3"
               value={constant}
@@ -155,6 +158,7 @@ export const GraphPage = () => {
                 value={x}
                 onChange={(e) => setX(e.target.value)}
                 required
+                type="number"
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -168,6 +172,7 @@ export const GraphPage = () => {
                 value={y}
                 onChange={(e) => setY(e.target.value)}
                 required
+                type="number"
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -181,6 +186,7 @@ export const GraphPage = () => {
                 value={constant}
                 onChange={(e) => setConstant(e.target.value)}
                 required
+                type="number"
               />
             </div>
           </div>

@@ -26,8 +26,7 @@ export const GraphPage = () => {
     equation: string;
   } | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     const xVal = parseFloat(x);
     const yVal = parseFloat(y);
     const constVal = parseFloat(constant);
@@ -187,16 +186,7 @@ export const GraphPage = () => {
           </div>
           <DialogFooter>
             <DialogClose asChild>
-              <Button
-                onClick={(e) => {
-                  handleSubmit(e);
-                  (
-                    document.querySelector("[data-state='open']") as HTMLElement
-                  )?.click();
-                }}
-                variant={"neutral"}
-                type="submit"
-              >
+              <Button onClick={handleSubmit} variant={"neutral"} type="submit">
                 Kirim
               </Button>
             </DialogClose>

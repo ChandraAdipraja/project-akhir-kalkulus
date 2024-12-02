@@ -36,7 +36,7 @@ export const GuidesPage = () => {
             >
               <Button variant={"neutral"}>
                 Download
-                <FaDownload className="ml-2 text-xl" />
+                <FaDownload className="ml-2 text-xl hover:text-red-500" />
               </Button>
             </Link>
           </div>
@@ -60,7 +60,7 @@ export const GuidesPage = () => {
             <Link href="/Assets/Create-Linearku.pdf" download={true}>
               <Button variant={"neutral"}>
                 Download
-                <FaDownload className="ml-2 text-xl" />
+                <FaDownload className="ml-2 text-xl hover:text-red-500" />
               </Button>
             </Link>
           </div>

@@ -46,7 +46,7 @@ export const ProfilePage = () => {
             </CardContent>
             <CardFooter className="flex flex-col items-center">
               <div className="mt-4 flex gap-4">
-                <SiGmail className="text-black-500 text-2xl" />
+                <SiGmail className="text-black-500 text-2xl hover:text-red-500" />
                 <Badge variant={"neutral"}>{profile.email}</Badge>
               </div>
               <div className="mt-4 flex gap-4">

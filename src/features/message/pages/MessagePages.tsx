@@ -53,6 +53,15 @@ export const MessagePage = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    void Swal.fire({
+      title: "Mengirim...",
+      text: "Silakan tunggu sebentar.",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+
     const form = {
       name,
       email,

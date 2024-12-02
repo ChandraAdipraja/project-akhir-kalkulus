@@ -28,7 +28,7 @@ export const profile: PropsProfile[] = [
   },
   {
     id: 2,
-    name: "Dzikra Adipraja",
+    name: "Moch Dzikra Rahayu",
     status: "Data Analyst",
     bio: "Halo, saya adalah seorang mahasiswa yang memiliki ketertarikan tentang dunia teknologi. Meski aset yang dimiliki tidak seberapa namun itu tidak membunuh rasa penasaran dan usaha saya dalam menyelami dunia teknologi",
     email: "dzikrahayu212@gmail.com",
@@ -42,7 +42,7 @@ export const profile: PropsProfile[] = [
   },
   {
     id: 3,
-    name: "Kibar Adipraja",
+    name: "Muhammad Kibar Ramadhan",
     status: "Designer",
     bio: "Pemuda asli Tasik yang sedang menempuh pendidikan di perguruan tinggi negeri, mempunyai aura posisi vibes yang dapat menghidupkan suasana orang lain",
     email: "kibarramadhan89@gmail.com",
@@ -56,7 +56,7 @@ export const profile: PropsProfile[] = [
   },
   {
     id: 4,
-    name: "Ridwan Adipraja",
+    name: "Ridwan Fauzi Almalik",
     status: "Desain Web",
     bio: "Pengen jadi streamer/Vtuber handal",
     email: "foxy.almalik@gmail.com",

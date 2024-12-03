@@ -72,7 +72,7 @@ export const GraphPage = () => {
             <Input
               id="x"
               type="number"
-              placeholder="Masukkan Koefisien X"
+              placeholder="Input Angka, ex : 2"
               value={x}
               onChange={(e) => setX(e.target.value)}
               required
@@ -83,7 +83,7 @@ export const GraphPage = () => {
             <Input
               id="Y"
               type="number"
-              placeholder="Masukkan Koefisien Y"
+              placeholder="Input Angka, ex : 4"
               value={y}
               onChange={(e) => setY(e.target.value)}
               required
@@ -96,7 +96,7 @@ export const GraphPage = () => {
             <Input
               id="konstanta"
               type="number"
-              placeholder="Masukkan Konstanta"
+              placeholder="Input Angka, ex : 8"
               className="col-span-3"
               value={constant}
               onChange={(e) => setConstant(e.target.value)}
@@ -153,7 +153,7 @@ export const GraphPage = () => {
               </Label>
               <Input
                 id="x"
-                placeholder="Masukkan Koefisien X"
+                placeholder="Input Angka, ex : 2"
                 className="col-span-3"
                 value={x}
                 onChange={(e) => setX(e.target.value)}
@@ -167,7 +167,7 @@ export const GraphPage = () => {
               </Label>
               <Input
                 id="y"
-                placeholder="Masukkan Koefisien Y"
+                placeholder="Input Angka, ex : 4"
                 className="col-span-3"
                 value={y}
                 onChange={(e) => setY(e.target.value)}
@@ -181,7 +181,7 @@ export const GraphPage = () => {
               </Label>
               <Input
                 id="konstanta"
-                placeholder="Masukkan Konstanta"
+                placeholder="Input Angka, ex : 8"
                 className="col-span-3"
                 value={constant}
                 onChange={(e) => setConstant(e.target.value)}

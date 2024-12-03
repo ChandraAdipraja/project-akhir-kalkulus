@@ -27,7 +27,7 @@ export const quiz: PropsQuestion[] = [
     b: "(-1, -18) dan (5, 96)",
     c: "(-1, 0) dan (5, 100)",
     d: "(-1, 0) dan (5, 50)",
-    answer: "a",
+    answer: "b",
   },
   {
     id: "3",

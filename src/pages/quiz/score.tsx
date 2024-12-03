@@ -59,7 +59,8 @@ const QuizResult = () => {
                   score === "6" ||
                   score === "7" ||
                   score === "8" ||
-                  score === "9"
+                  score === "9" ||
+                  score === "10"
                     ? "mt-10 text-8xl text-yellow-300 lg:text-9xl"
                     : "mt-10 text-8xl text-yellow-50 lg:text-9xl"
                 }
